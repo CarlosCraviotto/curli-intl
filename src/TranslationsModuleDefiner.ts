@@ -28,7 +28,7 @@ export class TranslationsModuleDefiner implements ModulesDefiner {
     }
 
     callMethodInModules (module: Module): void {
-        module.registerTemplates(this.translationsService);
+        module.registerTranslations(this.translationsService);
     }
 
     afterCallModules (): void {

@@ -36,7 +36,7 @@ import {TranslationsModuleDefiner} from "curli-intl";
 
 ```typescript
 public registerTranslations(translationsService: TranslationsService): void {
-    dataMappers.registerPath({path: 'languages/'});
+    translationsService.registerPath({path: 'languages/'});
 }
 ```
 
