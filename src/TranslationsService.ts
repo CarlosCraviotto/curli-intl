@@ -1,8 +1,8 @@
-import {PathOfTranslations} from "./PathOfTranslations";
-import {FileListLoaderConfig, FileListLoader} from "file-list-loader";
-import {LanguageCollection} from "./LanguageCollection";
-import {Languages} from "./Languages";
-import {LoadTranslations} from "./LoadTranslations";
+import {PathOfTranslations} from './PathOfTranslations';
+import {FileListLoaderConfig, FileListLoader} from 'file-list-loader';
+import {LanguageCollection} from './LanguageCollection';
+import {Languages} from './Languages';
+import {LoadTranslations} from './LoadTranslations';
 
 const DEFAULT_NAME = 'default';
 
@@ -10,23 +10,22 @@ export class TranslationsService {
 
     private languages: Languages;
 
-    public constructor(
+    public constructor (
         private supportLanguages: string[],
         private defaultLanguage: string
     ) {
-
 
         this.languages = {};
         this.initializeLanguageCollections();
     }
 
-    public async registerPath(path: PathOfTranslations) {
+    public async registerPath (path: PathOfTranslations) {
         const fileListLoader = this.buildFileLoader();
         await fileListLoader.addPaths(path);
         await LoadTranslations.load(fileListLoader, this.languages);
     }
 
-    public get(key: string, language?: string, data?: { [key: string]: string }) {
+    public get (key: string, language?: string, data?: { [key: string]: string }) {
         language = (language) ? language : DEFAULT_NAME;
         const languageCollection = this.languages[language];
 
@@ -37,8 +36,7 @@ export class TranslationsService {
         return languageCollection.get(key, data);
     }
 
-
-    private initializeLanguageCollections() {
+    private initializeLanguageCollections () {
         this.supportLanguages.forEach((lang: string) => {
             this.languages[lang] = new LanguageCollection(lang);
             if (lang === this.defaultLanguage) {
@@ -47,11 +45,12 @@ export class TranslationsService {
         });
     }
 
-    private buildFileLoader(): FileListLoader {
+    private buildFileLoader (): FileListLoader {
         const config: FileListLoaderConfig = {
             extensions: ['json'],
-            useFilePathInId: true
+            useFilePathInId: true,
         };
         return new FileListLoader(config);
     }
+
 }

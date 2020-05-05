@@ -1,17 +1,17 @@
 import chai = require('chai');
-//import { ImportMock } from 'ts-mock-imports';
+// import { ImportMock } from 'ts-mock-imports';
 
 import {TranslationsModuleDefiner} from '../../TranslationsModuleDefiner';
 import {
     CurliApplication,
     DependencyInjection,
     DependencyInjectionMock,
-    CurliApplicationMock
+    CurliApplicationMock,
 } from 'curli-types';
 
-let translationsModuleDefiner: TranslationsModuleDefiner;
-let curliApplication: CurliApplication;
-let container: DependencyInjection;
+let translationsModuleDefiner: TranslationsModuleDefiner,
+    curliApplication: CurliApplication,
+    container: DependencyInjection;
 
 describe('TranslationsModuleDefiner class tests', function () {
 
@@ -28,11 +28,10 @@ describe('TranslationsModuleDefiner class tests', function () {
         chai.assert.deepEqual('before:start', translationsModuleDefiner.whenCallMethodInModules());
     });
 
-
-//    it('Should throw an error if the TemplatesModuleDefiner', function () {
-//        chai.assert.throws(function () {
-//            templatesModuleDefiner.otherMehotd();
-//        }, 'Unexpected end of JSON input');
-//    });
+    //    it('Should throw an error if the TemplatesModuleDefiner', function () {
+    //        chai.assert.throws(function () {
+    //            templatesModuleDefiner.otherMehotd();
+    //        }, 'Unexpected end of JSON input');
+    //    });
 
 });

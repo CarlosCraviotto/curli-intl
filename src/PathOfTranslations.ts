@@ -1,3 +1,3 @@
 export type PathOfTranslations = {
-    path: string
+    path: string;
 };

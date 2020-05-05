@@ -1,3 +1,3 @@
-import {LanguageCollection} from "./LanguageCollection";
+import {LanguageCollection} from './LanguageCollection';
 
 export type Languages = { [key: string]: LanguageCollection }
