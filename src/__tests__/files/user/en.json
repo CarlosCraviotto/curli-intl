@@ -1,0 +1,5 @@
+{
+  "name": "Name",
+  "nameRegistration": "Name of registration",
+  "invalidName": "The name {{name}} is invalid."
+}

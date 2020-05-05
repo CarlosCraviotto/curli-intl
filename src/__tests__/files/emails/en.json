@@ -1,0 +1,5 @@
+{
+  "send": "Send",
+  "sent": "sent",
+  "invalidEmail": "The email {{name}} is invalid."
+}
