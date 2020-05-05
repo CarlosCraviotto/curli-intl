@@ -1,6 +1,6 @@
 {
   "name": "curli-intl",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1",
   "description": "Typed internationalization (intl/i18n) library for TypeScript/JavaScript apps and Curli Framework.",
   "main": "index",
   "scripts": {
