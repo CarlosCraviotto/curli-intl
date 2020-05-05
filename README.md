@@ -1,6 +1,7 @@
 # curli-intl
 
 [![Build Status](https://travis-ci.org/CarlosCraviotto/curli-intl.svg?branch=master)](https://travis-ci.com/github/CarlosCraviotto/curli-intl)
+[![Coverage Status](https://coveralls.io/repos/github/CarlosCraviotto/curli-intl/badge.svg?branch=master&cach=ff)](https://coveralls.io/github/CarlosCraviotto/curli-intl?branch=master)
 
 Typed internationalization (intl/i18n) library for TypeScript/JavaScript apps and Curli Framework.
 
